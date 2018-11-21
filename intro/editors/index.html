@@ -1,0 +1,4454 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//fonts.loli.net">
+<link rel="dns-prefetch" href="//cdnjs.loli.net">
+<link rel="dns-prefetch" href="//oi-wiki.org">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="//api.github.com">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="OI Wiki 是一个编程竞赛知识整合站点，提供有趣又实用的编程竞赛知识以及其他有帮助的内容，帮助广大编程竞赛爱好者更快更深入地学习编程竞赛竞赛">
+      
+      
+        <link rel="canonical" href="https://oi-wiki.org/intro/editors/">
+      
+      
+        <meta name="author" content="OI Wiki Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>编辑工具 - OI Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+
+    
+      
+        <link href="https://gstatic.loli.net" rel="preconnect" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.loli.net/css?family=Fira+Sans:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="https://fonts.loli.net/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ah@1.2.0/han.min.css">
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=11">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z"></path>
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#vim-" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://oi-wiki.org" title="OI Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                OI Wiki
+              </span>
+              <span class="md-header-nav__topic">
+                编辑工具
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/24OI/OI-wiki/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      24OI/OI-wiki
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." title="简介" class="md-tabs__link md-tabs__link--active">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic/" title="基础部分" class="md-tabs__link">
+          基础部分
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../search/" title="搜索" class="md-tabs__link">
+          搜索
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dp/" title="动态规划" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../string/" title="字符串" class="md-tabs__link">
+          字符串
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../math/" title="数学" class="md-tabs__link">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ds/" title="数据结构" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph/" title="图论" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../geometry/" title="计算几何" class="md-tabs__link">
+          计算几何
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../misc/" title="杂项" class="md-tabs__link">
+          杂项
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://oi-wiki.org" title="OI Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    OI Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/24OI/OI-wiki/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      24OI/OI-wiki
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked="">
+    
+    <label class="md-nav__link" for="nav-1">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mode/" title="OI 赛事与赛制" class="md-nav__link">
+      OI 赛事与赛制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resources/" title="学习资源" class="md-nav__link">
+      学习资源
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common-mistakes/" title="常见错误" class="md-nav__link">
+      常见错误
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common-tricks/" title="常见技巧" class="md-nav__link">
+      常见技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" checked="">
+    
+    <label class="md-nav__link" for="nav-1-6">
+      工具软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-6">
+        工具软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../judgers/" title="评测工具" class="md-nav__link">
+      评测工具
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        编辑工具
+      </label>
+    
+    <a href="./" title="编辑工具" class="md-nav__link md-nav__link--active">
+      编辑工具
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#vim-" title="Vim -- 编辑器之神" class="md-nav__link">
+    Vim -- 编辑器之神
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="历史与争端" class="md-nav__link">
+    历史与争端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="安装" class="md-nav__link">
+    安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="编译" class="md-nav__link">
+    编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="基础篇" class="md-nav__link">
+    基础篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert" title="插入模式 (insert)" class="md-nav__link">
+    插入模式 (insert)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal" title="普通模式 (normal)" class="md-nav__link">
+    普通模式 (normal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="命令行模式" class="md-nav__link">
+    命令行模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="可视模式" class="md-nav__link">
+    可视模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="插件篇" class="md-nav__link">
+    插件篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="文件管理" class="md-nav__link">
+    文件管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="美化界面" class="md-nav__link">
+    美化界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="启动界面" class="md-nav__link">
+    启动界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="小方便性插件" class="md-nav__link">
+    小方便性插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="配置篇" class="md-nav__link">
+    配置篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="基础设置" class="md-nav__link">
+    基础设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="快捷键设置" class="md-nav__link">
+    快捷键设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="写代码好用的" class="md-nav__link">
+    写代码好用的
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="关于插件" class="md-nav__link">
+    关于插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="关于高效编辑的建议" class="md-nav__link">
+    关于高效编辑的建议
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio-code-" title="Visual Studio Code - 微软家的编辑器" class="md-nav__link">
+    Visual Studio Code - 微软家的编辑器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/" title="WSL (Windows 10)" class="md-nav__link">
+      WSL (Windows 10)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spj/" title="Special Judge" class="md-nav__link">
+      Special Judge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testlib/" title="Testlib" class="md-nav__link">
+      Testlib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker-deploy/" title="Docker 部署" class="md-nav__link">
+      Docker 部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="F.A.Q." class="md-nav__link">
+      F.A.Q.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      基础部分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        基础部分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/" title="基础部分简介" class="md-nav__link">
+      基础部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/enumerate/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/simulate/" title="模拟" class="md-nav__link">
+      模拟
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/divide-and-conquer/" title="递归 &amp; 分治" class="md-nav__link">
+      递归 &amp; 分治
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/greedy/" title="贪心" class="md-nav__link">
+      贪心
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/sort/" title="排序" class="md-nav__link">
+      排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/expression/" title="表达式求值" class="md-nav__link">
+      表达式求值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/binary/" title="二分" class="md-nav__link">
+      二分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/construction/" title="构造" class="md-nav__link">
+      构造
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/prefix-sum/" title="前缀和 &amp; 差分" class="md-nav__link">
+      前缀和 &amp; 差分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/file-operation/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      搜索
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        搜索
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/" title="搜索部分简介" class="md-nav__link">
+      搜索部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dfs/" title="DFS" class="md-nav__link">
+      DFS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/bfs/" title="BFS" class="md-nav__link">
+      BFS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dbfs/" title="双向 BFS" class="md-nav__link">
+      双向 BFS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/heuristic/" title="启发式搜索" class="md-nav__link">
+      启发式搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/astar/" title="A*" class="md-nav__link">
+      A*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/iterative/" title="迭代加深搜索" class="md-nav__link">
+      迭代加深搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/idastar/" title="IDA*" class="md-nav__link">
+      IDA*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/backtracking/" title="回溯法" class="md-nav__link">
+      回溯法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/dlx/" title="Dancing Links" class="md-nav__link">
+      Dancing Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/optimization/" title="优化" class="md-nav__link">
+      优化
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/" title="动态规划部分简介" class="md-nav__link">
+      动态规划部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/memo/" title="记忆化搜索" class="md-nav__link">
+      记忆化搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/backpack/" title="背包 DP" class="md-nav__link">
+      背包 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/interval/" title="区间 DP" class="md-nav__link">
+      区间 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/dag/" title="DAG 上的 DP" class="md-nav__link">
+      DAG 上的 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/tree/" title="树形 DP" class="md-nav__link">
+      树形 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/state/" title="状压 DP" class="md-nav__link">
+      状压 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/number/" title="数位 DP" class="md-nav__link">
+      数位 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/plug/" title="插头 DP" class="md-nav__link">
+      插头 DP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/optimization/" title="DP 优化" class="md-nav__link">
+      DP 优化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dp/misc/" title="其它 DP 方法" class="md-nav__link">
+      其它 DP 方法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      字符串
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        字符串
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/" title="字符串部分简介" class="md-nav__link">
+      字符串部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/lib-func/" title="标准库" class="md-nav__link">
+      标准库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/match/" title="字符串匹配" class="md-nav__link">
+      字符串匹配
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/hash/" title="哈希" class="md-nav__link">
+      哈希
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/prefix-function/" title="前缀函数与 KMP 算法" class="md-nav__link">
+      前缀函数与 KMP 算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/trie/" title="字典树 (Trie)" class="md-nav__link">
+      字典树 (Trie)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/pam/" title="回文自动机" class="md-nav__link">
+      回文自动机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/palindrome-tree/" title="回文树" class="md-nav__link">
+      回文树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/sa/" title="后缀数组 (SA)" class="md-nav__link">
+      后缀数组 (SA)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/ac-automaton/" title="AC 自动机" class="md-nav__link">
+      AC 自动机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/sam/" title="后缀自动机 (SAM)" class="md-nav__link">
+      后缀自动机 (SAM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/suffix-tree/" title="后缀树" class="md-nav__link">
+      后缀树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/manacher/" title="Manacher" class="md-nav__link">
+      Manacher
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/minimal-string/" title="最小表示法" class="md-nav__link">
+      最小表示法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../string/z-function/" title="Z 函数（扩展 KMP）" class="md-nav__link">
+      Z 函数（扩展 KMP）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/" title="数学部分简介" class="md-nav__link">
+      数学部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/base/" title="进制" class="md-nav__link">
+      进制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/bit/" title="位运算" class="md-nav__link">
+      位运算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/bignum/" title="高精度" class="md-nav__link">
+      高精度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/quick-pow/" title="快速幂" class="md-nav__link">
+      快速幂
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      整除及其性质
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        整除及其性质
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/prime/" title="素数" class="md-nav__link">
+      素数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/gcd/" title="最大公约数" class="md-nav__link">
+      最大公约数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/euler/" title="欧拉函数" class="md-nav__link">
+      欧拉函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/sieve/" title="筛法" class="md-nav__link">
+      筛法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/fermat/" title="费马小定理" class="md-nav__link">
+      费马小定理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      同余方程相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-7">
+        同余方程相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/bezouts/" title="裴蜀定理" class="md-nav__link">
+      裴蜀定理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/inverse/" title="乘法逆元" class="md-nav__link">
+      乘法逆元
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/linear-equation/" title="线性方程" class="md-nav__link">
+      线性方程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/crt/" title="中国剩余定理" class="md-nav__link">
+      中国剩余定理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/bsgs/" title="BSGS" class="md-nav__link">
+      BSGS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/primitive-root/" title="原根" class="md-nav__link">
+      原根
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/gauss/" title="高斯消元" class="md-nav__link">
+      高斯消元
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/matrix/" title="矩阵" class="md-nav__link">
+      矩阵
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/dictionary/" title="分段打表" class="md-nav__link">
+      分段打表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/mobius/" title="莫比乌斯反演" class="md-nav__link">
+      莫比乌斯反演
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/du-sieves/" title="杜教筛" class="md-nav__link">
+      杜教筛
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/basis/" title="线性基" class="md-nav__link">
+      线性基
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-15" type="checkbox" id="nav-6-15">
+    
+    <label class="md-nav__link" for="nav-6-15">
+      多项式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-15">
+        多项式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/poly/" title="多项式部分简介" class="md-nav__link">
+      多项式部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/lagrange-poly/" title="拉格朗日插值" class="md-nav__link">
+      拉格朗日插值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/fft/" title="快速傅里叶变换" class="md-nav__link">
+      快速傅里叶变换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/ntt/" title="快速数论变换" class="md-nav__link">
+      快速数论变换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/fwt/" title="快速沃尔什变换" class="md-nav__link">
+      快速沃尔什变换
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16">
+    
+    <label class="md-nav__link" for="nav-6-16">
+      组合数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-16">
+        组合数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/combination/" title="排列组合" class="md-nav__link">
+      排列组合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/catalan/" title="卡特兰数" class="md-nav__link">
+      卡特兰数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/stirling/" title="斯特林数" class="md-nav__link">
+      斯特林数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/cantor/" title="康托展开" class="md-nav__link">
+      康托展开
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/inclusion-exclusion-principle/" title="容斥原理" class="md-nav__link">
+      容斥原理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/drawer-principle/" title="抽屉原理" class="md-nav__link">
+      抽屉原理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/expectation/" title="概率 &amp; 期望" class="md-nav__link">
+      概率 &amp; 期望
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/permutation-group/" title="置换群" class="md-nav__link">
+      置换群
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/integral/" title="数值积分" class="md-nav__link">
+      数值积分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/linear-programming/" title="线性规划" class="md-nav__link">
+      线性规划
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/game/" title="博弈论" class="md-nav__link">
+      博弈论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math/misc/" title="杂项" class="md-nav__link">
+      杂项
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/" title="数据结构部分简介" class="md-nav__link">
+      数据结构部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      STL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        STL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stl/" title="STL 简介" class="md-nav__link">
+      STL 简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stl/vector/" title="vector" class="md-nav__link">
+      vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stl/priority_queue/" title="priority_queue" class="md-nav__link">
+      priority_queue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stl/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stl/bitset/" title="bitset" class="md-nav__link">
+      bitset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      pb_ds
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        pb_ds
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/pb-ds/" title="pb_ds 简介" class="md-nav__link">
+      pb_ds 简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/pb-ds/priority-queue/" title="priority_queue" class="md-nav__link">
+      priority_queue
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/linked-list/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/hash/" title="哈希表" class="md-nav__link">
+      哈希表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/dsu/" title="并查集" class="md-nav__link">
+      并查集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-10" type="checkbox" id="nav-7-10">
+    
+    <label class="md-nav__link" for="nav-7-10">
+      块状数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-10">
+        块状数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/square-root-decomposition/" title="分块思想" class="md-nav__link">
+      分块思想
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/block-list/" title="块状链表" class="md-nav__link">
+      块状链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/block-array/" title="块状数组" class="md-nav__link">
+      块状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/tree-decompose/" title="树分块" class="md-nav__link">
+      树分块
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/monotonous-stack/" title="单调栈" class="md-nav__link">
+      单调栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/monotonous-queue/" title="单调队列" class="md-nav__link">
+      单调队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/sparse-table/" title="倍增" class="md-nav__link">
+      倍增
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/bit/" title="树状数组" class="md-nav__link">
+      树状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/segment/" title="线段树" class="md-nav__link">
+      线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/dividing/" title="划分树" class="md-nav__link">
+      划分树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/virtual-tree/" title="虚树" class="md-nav__link">
+      虚树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/sbt/" title="Size Balanced Tree" class="md-nav__link">
+      Size Balanced Tree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/treap/" title="Treap" class="md-nav__link">
+      Treap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/splay/" title="Splay" class="md-nav__link">
+      Splay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/wblt/" title="WBLT" class="md-nav__link">
+      WBLT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/avl/" title="AVL 树" class="md-nav__link">
+      AVL 树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/scapegoat/" title="替罪羊树" class="md-nav__link">
+      替罪羊树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-24" type="checkbox" id="nav-7-24">
+    
+    <label class="md-nav__link" for="nav-7-24">
+      树套树
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-24">
+        树套树
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/seg-in-seg/" title="线段树套线段树" class="md-nav__link">
+      线段树套线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/seg-in-balanced/" title="平衡树套线段树" class="md-nav__link">
+      平衡树套线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/balanced-in-seg/" title="线段树套平衡树" class="md-nav__link">
+      线段树套平衡树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent-in-bit/" title="树状数组套主席树" class="md-nav__link">
+      树状数组套主席树
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/k-dtree/" title="K-Dtree" class="md-nav__link">
+      K-Dtree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-26" type="checkbox" id="nav-7-26">
+    
+    <label class="md-nav__link" for="nav-7-26">
+      可持久化数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-26">
+        可持久化数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent/" title="可持久化数据结构简介" class="md-nav__link">
+      可持久化数据结构简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent-seg/" title="可持久化线段树" class="md-nav__link">
+      可持久化线段树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent-block-array/" title="可持久化块状数组" class="md-nav__link">
+      可持久化块状数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent-balanced/" title="可持久化平衡树" class="md-nav__link">
+      可持久化平衡树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/persistent-trie/" title="可持久化字典树" class="md-nav__link">
+      可持久化字典树
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/lct/" title="Link Cut Tree" class="md-nav__link">
+      Link Cut Tree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ds/ett/" title="Euler Tour Tree" class="md-nav__link">
+      Euler Tour Tree
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/" title="图论部分简介" class="md-nav__link">
+      图论部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/basic/" title="图论基础" class="md-nav__link">
+      图论基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/traverse/" title="图的遍历" class="md-nav__link">
+      图的遍历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      树上问题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        树上问题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/tree-basic/" title="树基础" class="md-nav__link">
+      树基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/lca/" title="最近公共祖先" class="md-nav__link">
+      最近公共祖先
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/dfs-order/" title="DFS 序" class="md-nav__link">
+      DFS 序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/tree-misc/" title="树的其他问题" class="md-nav__link">
+      树的其他问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/heavy-light-decomposition/" title="树链剖分" class="md-nav__link">
+      树链剖分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/tree-divide/" title="树分治" class="md-nav__link">
+      树分治
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/dynamic-tree-divide/" title="动态树分治" class="md-nav__link">
+      动态树分治
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/dag/" title="有向无环图" class="md-nav__link">
+      有向无环图
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/topo/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/mst/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/differential-constraints/" title="差分约束" class="md-nav__link">
+      差分约束
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/kth-path/" title="k 短路" class="md-nav__link">
+      k 短路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-11" type="checkbox" id="nav-8-11">
+    
+    <label class="md-nav__link" for="nav-8-11">
+      连通性相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-11">
+        连通性相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/scc/" title="强连通分量" class="md-nav__link">
+      强连通分量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bcc/" title="双连通分量" class="md-nav__link">
+      双连通分量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bridge/" title="割点和桥" class="md-nav__link">
+      割点和桥
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/2-sat/" title="2-SAT" class="md-nav__link">
+      2-SAT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/euler/" title="欧拉图" class="md-nav__link">
+      欧拉图
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/bi-graph/" title="二分图" class="md-nav__link">
+      二分图
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/min-circle/" title="最小环" class="md-nav__link">
+      最小环
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-15" type="checkbox" id="nav-8-15">
+    
+    <label class="md-nav__link" for="nav-8-15">
+      网络流
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-15">
+        网络流
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/" title="网络流简介" class="md-nav__link">
+      网络流简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/node/" title="拆点" class="md-nav__link">
+      拆点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/max-flow/" title="最大流" class="md-nav__link">
+      最大流
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/min-cut/" title="最小割" class="md-nav__link">
+      最小割
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/min-cost/" title="费用流" class="md-nav__link">
+      费用流
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph/flow/bound/" title="上下界网络流" class="md-nav__link">
+      上下界网络流
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      计算几何
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        计算几何
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/" title="计算几何部分简介" class="md-nav__link">
+      计算几何部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/2d/" title="二维计算几何基础" class="md-nav__link">
+      二维计算几何基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/3d/" title="三维计算几何基础" class="md-nav__link">
+      三维计算几何基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/pick/" title="Pick 定理" class="md-nav__link">
+      Pick 定理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/triangulation/" title="三角剖分" class="md-nav__link">
+      三角剖分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/convex-hull/" title="凸包" class="md-nav__link">
+      凸包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/scanning/" title="扫描线" class="md-nav__link">
+      扫描线
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/rotating-calipers/" title="旋转卡壳" class="md-nav__link">
+      旋转卡壳
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/half-plane-intersection/" title="半平面交" class="md-nav__link">
+      半平面交
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../geometry/magic/" title="计算几何杂项" class="md-nav__link">
+      计算几何杂项
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      杂项
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        杂项
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/" title="杂项简介" class="md-nav__link">
+      杂项简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/non-traditional/" title="非传统题" class="md-nav__link">
+      非传统题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cdq-divide/" title="CDQ 分治" class="md-nav__link">
+      CDQ 分治
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/mo-algo/" title="莫队算法" class="md-nav__link">
+      莫队算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/hill-climbing/" title="爬山算法" class="md-nav__link">
+      爬山算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/fractional-programming/" title="分数规划" class="md-nav__link">
+      分数规划
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/simulated-annealing/" title="模拟退火" class="md-nav__link">
+      模拟退火
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/zhu-liu-algorithm/" title="朱刘算法" class="md-nav__link">
+      朱刘算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/matrix-tree/" title="矩阵树定理" class="md-nav__link">
+      矩阵树定理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/random-incremental/" title="随机增量法" class="md-nav__link">
+      随机增量法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/random/" title="随机化" class="md-nav__link">
+      随机化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/offline/" title="离线处理" class="md-nav__link">
+      离线处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/distance/" title="距离" class="md-nav__link">
+      距离
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/endianness/" title="字节顺序" class="md-nav__link">
+      字节顺序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/complexity/" title="复杂度" class="md-nav__link">
+      复杂度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/io/" title="读入、输出优化" class="md-nav__link">
+      读入、输出优化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/dsu-on-tree/" title="树上启发式合并" class="md-nav__link">
+      树上启发式合并
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#vim-" title="Vim -- 编辑器之神" class="md-nav__link">
+    Vim -- 编辑器之神
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="历史与争端" class="md-nav__link">
+    历史与争端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="安装" class="md-nav__link">
+    安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="编译" class="md-nav__link">
+    编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="基础篇" class="md-nav__link">
+    基础篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert" title="插入模式 (insert)" class="md-nav__link">
+    插入模式 (insert)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal" title="普通模式 (normal)" class="md-nav__link">
+    普通模式 (normal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="命令行模式" class="md-nav__link">
+    命令行模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="可视模式" class="md-nav__link">
+    可视模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="插件篇" class="md-nav__link">
+    插件篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="文件管理" class="md-nav__link">
+    文件管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="美化界面" class="md-nav__link">
+    美化界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="启动界面" class="md-nav__link">
+    启动界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="小方便性插件" class="md-nav__link">
+    小方便性插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="配置篇" class="md-nav__link">
+    配置篇
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="基础设置" class="md-nav__link">
+    基础设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="快捷键设置" class="md-nav__link">
+    快捷键设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="写代码好用的" class="md-nav__link">
+    写代码好用的
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="关于插件" class="md-nav__link">
+    关于插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="关于高效编辑的建议" class="md-nav__link">
+    关于高效编辑的建议
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio-code-" title="Visual Studio Code - 微软家的编辑器" class="md-nav__link">
+    Visual Studio Code - 微软家的编辑器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/24OI/OI-wiki/blob/master/docs/intro/editors.md" title="编辑此页" class="md-icon md-content__icon"></a>
+                
+                
+                  <h1>编辑工具</h1>
+                
+                 <blockquote class="page-time"></blockquote>
+                <h2 id="vim-">Vim -- 编辑器之神<a class="headerlink" href="#vim-" title="Permanent link">¶</a></h2>
+<h3 id="_1">历史与争端<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>Vim 的前身是 vi，一个简洁但是略有不足的编辑器，但是从 vi 开始，编辑器的模式区分和唯快不破的思想就已经体现的很到位了。Vim 即是 vi improved，是在 vi 原本所有的方式上进行的进一步提升，但是并不会改变 vi 的其他本质，只是增加了更多适应如今需要的一些功能。</p>
+<p>vi 于 1976 年诞生，与 Emacs 不分先后，两者因其快捷的编辑被奉为神器，甚至使用者们还有爆发过 “圣战”，即是 <code>神的编辑器 Emacs</code> VS <code>编辑器之神 Vim</code>，但是当然分不出结果，因为各有优劣。但它们共有的特点就是高度的扩展性与高度的可定制性以及快捷方便的使用。</p>
+<p>Vim 的模式区分是一个很有意思的设定，普通模式与插入模式是最主要常用的模式，普通模式下的每个键都是命令，这便是 Vim 不同于 Emacs 的地方，若是习惯了 Vim 的模式之间的切换，大部分都是单个键的命令必然比 Emacs 的无限 Ctrl 会更高效，虽然 Vim 的小容量注定比不了 Emacs “操作系统” 这个东西那么万能，但是论快而言，Vim 是无可争议的顶尖编辑器。</p>
+<p>Vim 有丰富的插件扩展，这点显然是比配置更迷人的存在。有这些扩展性存在，Vim 成为一个 IDE 也不会是不可能的事情。</p>
+<p>但是，Vim 的初始学习注定是艰难的，因为其与多数主流操作不同的方式令稍懒的新手望而却步，这需要时间来适应但当度过最开始的不适应期之后，Vim 就再无难度，你会慢慢上瘾，不断优化你的配置，寻找新的更好用的插件。开始的过程就像是铸剑，之后的过程就像是与剑的更好的磨合，然后在剑中逐渐注入你的灵魂，这样它就成为了你最好的利器，令你无法割舍。乃至你会自己写适合自己的插件，就像是自创剑法，而不像是从别人那里借来剑法，杂七杂八融为一炉。</p>
+<p>有人说了这样一句话：</p>
+<p>Vim 是一款非常优秀的文本编辑器，但由于其陡峭的学习曲线，很多人还没开始学就放弃了，所以他们无法领悟 Vim 唯快不破的设计思想和精巧的使用体验。</p>
+<p>附一张图，论各大编辑器的学习曲线，纵坐标代表掌握知识量及难度，横坐标代表使用的熟练程度与完成任务的效率。我们可以看到，Vim 的曲线岂止陡峭，都垂直了…… 但是开始过去后，是平稳的提升，只要度过开始的阶段，Vim 的学习将再无阻碍，一路直上有没有。</p>
+<p><img alt="" src="../images/horrorstories.txt.jpg"></p>
+<h3 id="_2">安装<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>一般的话，Linux 系统都是会自带 Vim 的，打开终端输入 <code>vim</code> 即可启用。</p>
+<p>Vim 依附于终端，所以调整终端设置也可以达到美化效果。</p>
+<p>但是自带的 Vim 很容易有功能残缺，比如有的就不能与系统剪切板交互 (将会在进阶篇讲解)，各种未开启支持。那么这时候我们就需要手动安装，方法有二。第一步先是卸载 Vim，命令如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get remove vim
+</pre></div>
+</td></tr></tbody></table>
+
+<p>然后安装有两种做法，一是使用命令安装，但我无法确定软件源的版本有没有问题 = =。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install vim
+</pre></div>
+</td></tr></tbody></table>
+
+<p>做法二，先到 <a href="https://github.com/vim/vim/releases">Releases - vim/vim</a> 下载源码包，然后解压，并进入解压后的文件夹，并打开终端，cd 至文件夹路径，并依次输入如下命令：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./configure
+make
+sudo make install
+</pre></div>
+</td></tr></tbody></table>
+
+<p>make 的过程可能稍久，淡定点等。</p>
+<p>最后在终端输入</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim
+</pre></div>
+</td></tr></tbody></table>
+
+<p>就跳出了那个帮帮乌干达的可怜儿童啥的，按 <code>a</code> 或 <code>i</code> 键开始编辑新文件吧。</p>
+<p>或者要打开某个文件的话就可以在终端中</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim 文件路径
+</pre></div>
+</td></tr></tbody></table>
+
+<p>可以直接编辑文件。</p>
+<h3 id="_3">编译<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>编译的话，先要安装 g++，命令如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install g++
+</pre></div>
+</td></tr></tbody></table>
+
+<p>然后 cd 至 cpp 文件指定路径执行如下命令</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>g++ filename.cpp -o filename
+./filename
+</pre></div>
+</td></tr></tbody></table>
+
+<p>第一个命令是编译，第二个则是运行。</p>
+<p>一键编译运行的配置在配置篇给出。</p>
+<h3 id="_4">基础篇<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>分模式来吧。</p>
+<h4 id="insert">插入模式 (insert)<a class="headerlink" href="#insert" title="Permanent link">¶</a></h4>
+<p>插入模式的知识点其实没有太多，输入才是主职是伐。</p>
+<p>首先，从普通模式如何进入插入模式呢？有数个命令：<code>i</code> 与 <code>a</code> 与 <code>A</code> 与 <code>o</code>。前两个差别不大，<code>i</code> 是在光标当前位置进行写代码，<code>a</code> 是往后挪一个字符写代码。<code>A</code> 是移动到当前行尾进行插入，<code>o</code> 是在行尾添加换行符并在下一行插入。</p>
+<p>而如何返回普通模式？当然是 <kbd>Esc</kbd> 啦。但是，Vim 的插入与普通模式切换异常频繁，而 <kbd>Esc</kbd> 又太远了，有什么办法呢？Vim 还提供了 <kbd>Ctrl</kbd> + <kbd>[</kbd> 的快捷键来返回普通模式，是否近多了呢？</p>
+<p>虽说能够熟练了后，切换模式不再是问题，但是其实有的时候我们只是需要进入普通模式下按一次小命令，来回切换又显得浪费了一点点时间。而 Vim 又提供了插入 - 普通模式来避免这一尴尬的问题。在插入模式下，只需要按 <kbd>Ctrl</kbd> + <kbd>o</kbd> 即可进入此模式，当进行完一次操作后又会自动回到插入模式。这样岂不是更省时间？</p>
+<h4 id="normal">普通模式 (normal)<a class="headerlink" href="#normal" title="Permanent link">¶</a></h4>
+<p>Vim 的命令大部分都是在普通模式下完成的，普通模式下可不能乱按，可以说每个键都是命令。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>首先是 hjkl 四个方向键。                         
+                                              k ^
+                                           h &lt;     &gt; l
+                                                v j
+</pre></div>
+</td></tr></tbody></table>
+
+<p>其实大多数编辑器都是用方向键做出移动命令，Vim 也不例外，但 <code>hjkl</code> 给了我们更好的选择，只需要一段时间的适应，你便能快速地操作它们进行移动，而且它们可没有方向键那么远，节省时间是一流的。</p>
+<p>普通模式下最重要的命令，没有之一，那就是 <code>u</code>。撤销命令，作用是撤销上一次对文本的更改，普通模式下的 <code>x</code>，<code>d</code>，<code>p</code> 命令都会被撤销，同时进入一次插入模式所编辑的文本也算一次更改，<code>u</code> 命令会删去从进入到退出插入模式所输入的所有东西。与之对应的是 <kbd>Ctrl</kbd> + <kbd>r</kbd> 命令，他的作用是撤销上次的撤销命令，相当于大部分 windows 下程序中的 <kbd>Ctrl</kbd> + <kbd>y</kbd>。</p>
+<p>然后的话, 就是普通模式下常用的命令。由于对行命令的使用很频繁，所以大部分的单键命令都可以通过按两次来实现对行操作。常用命令是 <code>x</code> ，用于删除光标后的一个字符。然后是 <code>d</code> 命令，也是删除，但是种类更多，这里不做赘述。同时 <code>d</code> 命令像之前说的，按两次即可删除整行，即 <code>dd</code>。</p>
+<p>然后是<code>y</code>命令，可以复制被选中的区域，这涉及到可视模式，即按 <code>v</code> 进入可视模式，多用于选中区域。进入可视模式后移动光标来确定选取范围是可以的，此时按 <code>o</code> 键即可切换活动端，省去了如果跑反方向的麻烦。当然，我相信很多人还是习惯用鼠标操作这一过程的，包括移动光标。Vim 很温馨的提供了这一配置：<code>set mouse=a</code>。你可以将它写入你的配置文件中去。有了它之后，你将能够用鼠标选中区域并进行复制操作。当然，选中后按 <code>x</code> 或 <code>d</code> 亦可删除。同时，<code>y</code> 也符合 <code>d</code> 的性质，<code>yy</code> 将可以复制当前行。</p>
+<p>然后就是更快的跳跃了。如果说只是使用 <code>hjkl</code> 的话，光标的移动显然不够快，而鼠标却又要伸手去拿。Vim 提供了普通模式下更快的跳跃方法，<code>w</code> 可以跳到下个单词的开头，而 <code>e</code> 可以跳到当前单词结尾，<code>0</code> 可以跳至行首，<code>$</code> 可以跳至行尾，岂不是快多了？而且 <code>w</code>，<code>e</code>，<code>0</code>，<code>$</code> 还可以用于许多命令中 <code>de</code>，<code>dw</code>，<code>d0</code>，<code>d&amp;</code> 分别对应删至单词尾，删至下个单词头，删至行首，删至行尾。以及<code>y</code>命令亦可同理。</p>
+<p>然后是 Vim 的可重复。在输入某个命令前，输入一个数字的话，就会重复那么多次。如在普通模式下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>asdasdasdasdasd
+asdadasdddd
+asdasdasd
+</pre></div>
+</td></tr></tbody></table>
+
+<p>光标正位于第一行，该如何删除这三行呢？普通模式下按  <code>3 dd</code>  即可。其实还有<code>.</code>命令也是可以做到一些重复的，这会在效率篇中提到。</p>
+<p>然后是全文的跳跃，按 <code>gg</code> 可跳至代码的开头，按 <code>G</code> 可跳至代码最后一行，先按数字再按 <code>G</code> 可跳至指定行。</p>
+<p>那么在文中还有极为方便的查找功能，普通模式下只需按 <code>/</code> 下方即会出现查找框框，输入需要查找的字符按回车就好啦，如果有多个查找结果，只需按 <code>n</code> 即可跳至下一个查找处，按 <code>N</code> 即可跳至上一个。</p>
+<p>常用命令大概就这些了……</p>
+<h4 id="_5">命令行模式<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<p>其实这并不能称作是一个模式 = =。</p>
+<p>普通模式下只需要按 : 下方就会蹦出命令框框，输入相关命令即可。如 Vim 在线帮助文档，输入 <code>:help</code> 即可，如果看不懂英文…… 请下载 Vim 用户手册中文，或者移步插件篇。</p>
+<p>此模式下有一些很有用的命令</p>
+<p><code>:q</code> 退出，<code>:w</code> 保存，<code>:wq</code> 保存并退出，<code>:q!</code> 不保存并退出，<code>:e filename</code> 打开当前目录下指定文件，这些是比较基础的。</p>
+<p>然后是很强大的命令 <code>:x1,x2 s/A 串 / B 串 /</code> 作用是把第 <code>x1</code> 行至 <code>x2</code> 行中的所有 A 串替换成 B 串。想象一下题写完了，但是发现没开 <code>long long</code> 的时候，完全不绝望有没有，一个小命令，妙不可言。瞬间所有 <code>int</code> 变 <code>long long</code>。</p>
+<p>以上都是 Vim 内部的命令，但是实际上如果命令形式是 <code>:! 命令</code> 那么就将在外部执行命令，即是以 bash 终端执行命令。既然都是外部 bash 了我就不多做介绍了，那块地不归我管……</p>
+<h4 id="_6">可视模式<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p>可视模式的作用总结起来大概就是选中高亮，但是块状的可视模式可以干更多的事情，不过太麻烦了，对于新人来说大概会脑阔疼。</p>
+<p>普通模式下按 <code>v</code> 即可进入可视模式，<code>hjkl</code> 可以移动高亮选区某一头，如果发现反了或者你进入可视模式的时候是在想要选中区域的中间位置，不用急着退出重进，更不用花时间又移回去，只需要按<code>o</code>即可切换活动端，操作高亮选区的另一头。或者用鼠标也不是不行啦……</p>
+<p>用鼠标选中高亮选区当然也可以说是进入可视模式的办法之一。</p>
+<p>然后就是<code>y</code>或者<code>d</code>操作，没了 QwQ。</p>
+<p>emm 基础应该就用到这些了吧，往后的插件，配置，更多操作在对应篇幅里。</p>
+<p>最后其实 Vim 还有一些基础操作，它们在 Vim 自带的教程里将会讲述。打开终端输入：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vimtutor
+</pre></div>
+</td></tr></tbody></table>
+
+<p>即可进入教程，二三十分钟你就能掌握基础了，但应当加以练习才能彻底掌握。</p>
+<h3 id="_7">插件篇<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>基础篇里说过，Vim 与 Emacs 之所以能成为两大巅峰的神器是因为其高度的扩展与可定制性，而最能体现这一特性的就是插件了。它们是最有魅力的一部分，是最令你无法抗拒的组成。</p>
+<p>虽然考场上基本上不能用插件，但是日常的学习中，插件将对你的效率有很大的提高，而且一些插件的部分功能可以通过 Vim 自带实现以及配置实现。</p>
+<p>首先，其实从前插件的安装必须下载之后丢到 .vim 文件夹中，删了又要下云云，十分麻烦。于是在使用者们的捣鼓下，一枚强大的插件管理器由此诞生——Vundle。</p>
+<p>当然你的配置里必须有如下两行：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">nocompatible</span>
+<span class="k">filetype</span> plugin <span class="k">on</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>以确保你的 Vim 可以加载插件，哪怕是 Vim 原生内置的插件也需要的。</p>
+<p>至于具体过程如下：</p>
+<p>首先是在 home 目录下建立文件夹 .vim。然后打开终端输入以下命令：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install git
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+</pre></div>
+</td></tr></tbody></table>
+
+<p>就安装好了。</p>
+<p>然后在 .vim 文件夹下创建文件夹 plugin 。这个文件夹用于存放那种不能用 Vundle 插件下载，而在别的地方有得下载的脚本插件，名字是 xxx.vim，直接扔进这个文件夹就可以使用了。</p>
+<p>Vundle 可以很轻松的管理插件，只需要在配置中写一下，并在 Vim 中执行<code>:PluginInstall</code>命令，就可以自动从 github 上拉取插件，当然也拉取不了 github 上没有的 = =。而如果不想用了什么插件也无须删去，在配置中注释掉那个插件的相关就行了。具体配置请移步配置篇，此处将会详细介绍我的各个插件。</p>
+<h4 id="_8">文件管理<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<p>使用 Vim 的时候打开文件显然毫不方便，不论是在目标文件夹下利用</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim filename
+</pre></div>
+</td></tr></tbody></table>
+
+<p>打开文件还是在 Vim 内使用 <code>:e filename</code> 来打开文件显然都过于麻烦。那么有没有什么更好的法子？</p>
+<p>答案是显然的，Vim 的用户们开发了 nerdtree 这一插件。这个插件达到了一种类似于 VScode 中的效果——工程目录树，之需在左侧目录栏选中相应文件即可打开相应文件。这在配置篇中将会有介绍。nerdtree 的开启方式是在 Vim 中输入 <code>:NERDTreeToggle</code> ，它会在左侧打开一个侧边栏窗口。我知道这显然太过麻烦，所以在配置中我给它赋予了 <kbd>F10</kbd> 这个快捷键。至于具体还有什么快捷键，详请参照 <a href="[http://yang3wei.github.io/blog/2013/01/29/nerdtree-kuai-jie-jian-ji-lu/">此文章</a>。</p>
+<p>也许有人要说考场上该如何呢？没关系，Vim 自带了一个稍逊一筹的文件管理器 netrw 。如果你的命令是这样的</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim 文件夹<span class="o">(</span>或者说目录<span class="o">)</span>路径
+</pre></div>
+</td></tr></tbody></table>
+
+<p>或者是在 Vim 中 <code>e 文件夹路径</code>即可打开目录插件，你可以亲手试一试，我觉得这个还是不难琢磨的。同时在上述两个命令中可以用<code>.</code>来表示当前工作目录，意思是可以用</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim .
+</pre></div>
+</td></tr></tbody></table>
+
+<p>或者在 Vim 中使用 <code>e .</code> 来开启插件</p>
+<p>当然，如果仅是如此还不够，使用文件管理器打开文件的话，容易使工作目录出现差错，从而导致编译的程序不存在于原文件夹中，所以你的配置文件中还需以下语句：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">autochdir</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>它的作用是会自动把工作目录移动到当前编辑文件所在目录。</p>
+<h4 id="_9">美化界面<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<p>首先就是那行白乎乎的状态栏，显示的信息还不够多，也不好看对吧。显示的信息是可以在配置中写的，请移步配置篇。但是不好看的问题怎么解决呢？这个时候就轮到了 airline 插件出马了，不多说，放两张图自然明白。</p>
+<p><img alt="airline1" src="../images/airline1.png"></p>
+<p><img alt="airline2" src="../images/airline2.png"></p>
+<p>然后，其实我们的 nerdtree 插件也是可以美化的，同时多安装一个小插件和一点配置即可达到美化效果，具体请移步配置篇食用。</p>
+<h4 id="_10">启动界面<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>这个其实可有可无，是一个能快捷键打开历史记录的一个插件 vimplus-startify，具体可以自己尝试。</p>
+<h4 id="_11">小方便性插件<a class="headerlink" href="#_11" title="Permanent link">¶</a></h4>
+<p>commentary ：快捷键 <code>gc</code> 注释选中行，<code>gcu</code> 撤销上次注释。</p>
+<p>syntastic ：<code>:w</code> 保存时提示语法错误，需配置中设置标错样式，如我的就会在行前显示 <code>&gt;&gt;</code>。</p>
+<p>easymotion ：快速跳转，我自己其实都不会用 233，需要可以查阅资料。</p>
+<p>rainbow ： 彩虹括号，使具有包含关系的括号显现出不同的颜色，增强多括号代码的可读性。</p>
+<p>delimitMate ： 括号补全功能。同时考试中可用配置实现部分功能，配置篇中会讲述。</p>
+<p>vimcdoc ：汉化 Vim 在线文档。</p>
+<p>gundo ：这个插件将能够显示你的文件修改树，就像 github 上一般能够回到历史版本，时光机啊 QwQ 。Vim 中<code>:GundoToggle</code>即可在左侧打开时光机。</p>
+<p>vimim ：这个的安装不在配置中，相当于 Vim 自带中文输入法，需在 <code>.vim</code> 中创建文件夹 plugin 并把 <a href="https://www.vim.org/scripts/download_script.php?src_id=23122">从这里</a> 下得的文件扔入此文件夹中即可。打开 Vim 并进入插入模式，按下 <kbd>Ctrl</kbd> + <kbd>/</kbd> 即可启用。但是使用的是云词库，若没网就会卡死。所以建议下载<a href="https://github.com/vimim/vimim/raw/master/plugin/vimim.gbk.bsddb">本地超大词库</a>，也放入 plugin 文件夹中，与插件脚本同目录即可启用。</p>
+<p>vim-instant-markdown ：这个插件可就厉害了。Vim 用习惯了之后什么都想用 Vim 来做，比如想用 Vim 来写 Markdown 并实时预览怎么办？于是这个强大的插件就诞生了，当打开 Markdown 文件时会自动在浏览器中打开一个标签页，将能够实时预览你的 Vim 中的 markdown 内容。</p>
+<p>一切插件的安装写法及快捷键及配置皆在配置篇中，请移步。</p>
+<h3 id="_12">配置篇<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/LuoshuiTianyi/Vim-for-OIWiki">我的配置</a> Ps: 我的 .vimrc 时刻在改，所以这只是个副本……</p>
+<p>结合我的配置讲一讲一些 Vim 中的小细节和快捷键以及一些…… 七里八里的东西？</p>
+<p>Vim 的配置语法没那么麻烦，基本上就是 set 开启选项，call xxx() 调用函数，func 与 endfunc 定义函数，exec 执行命令，if 和 endif 描述以下条件表达式，" 表示注释，source 表示应用啥的，语法和 Vim 命令行下一模一样，只是当你把配置文件写入，Vim 开启时会自动执行配置中的每一行语句。</p>
+<h4 id="_13">基础设置<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<p>我必须说我的配置里其实没有背景方面的设置，因为我黑背景加个透明化很舒服了…… 接下来我会挑重要的配置来讲，剩下的可以结合我的配置内的注释来看</p>
+<p>首先使用各种插件容易与 vi 的模式产生冲突，所以我们要关闭 vi 的功能，那么就有了如下配置：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">nocompatible</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>通过这个设置将关闭原有 vi 的功能以防冲突</p>
+<p>随后，当你打开你的 cpp 文件时，你会发现及其之丑，因为没有了语法高亮，一切都是一个颜色了。那么配置中需加入如下两行</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">syntax</span> enable
+<span class="nb">syntax</span> <span class="k">on</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>分别是开启高亮支持与开启语法高亮</p>
+<p>然后是我们可爱的状态栏，<code>set laststatus=2</code> 这行配置将会使得状态栏总是显示，而状态栏所显示的信息在配置中是可以设置的。设置如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">statusline</span><span class="p">=</span>\ %<span class="p">&lt;</span>%F[%<span class="m">1</span>*%M%*%<span class="k">n</span>%R%H]%<span class="p">=</span>\ %<span class="k">y</span>\ %<span class="m">0</span><span class="p">(</span>%{&amp;<span class="nb">fileformat</span>}\ [%{<span class="p">(</span>&amp;<span class="nb">fenc</span><span class="p">==</span>\<span class="s2">"\"?&amp;enc:&amp;fenc).(&amp;bomb?\",BOM\":\"\"</span><span class="p">)</span>}]\ %<span class="k">c</span>:%<span class="k">l</span>/%L%<span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>这一行会使状态栏显示包括文件路径，模式，文件类型，文件编码，所在行数与列数，以及光标所在处是文件的百分之多少。加上 airline 插件，既美观又实用。</p>
+<p>再然后，默认情况下换行符是不可被删除的，除非使用 <code>dd</code> 命令或者 <code>J</code> 命令才可做到。那么我们需要 <code>set backspace=indent,eol,start</code> 这行配置来解除这种限制。</p>
+<p>显然还有一件事，那就是行号的问题。不管是评测文件写了多少行还是想要使用 <code>数字 + G</code> 的命令跳至指定行，没有行号的显示肯定是崩溃的。那么可以使用 <code>set number</code> 开启行号显示的功能。然后是 Vim 的自动折行功能，那就是当某一行超过了 Vim 窗口的边界，Vim 会怎么做呢？多出的部分会自动显示在下一行，而这种多出来的行前面是没有行号的，比较好辨认，这些行被称为屏幕行，而根据行号一一对应的便称作实际行。但是仅仅凭着看前面的行号来辨认某个折下来的行属于那个实际行的话，还是不够快。我们可以使用<code>set cursorline</code>来开启高亮显示当前行，而这个高亮也是可以设置的，我的配置里也有。</p>
+<p>然后是我们在基础篇中提到过的，开启鼠标支持<code>set mouse=a</code>，以及插件篇中提及的<code>set autochdir</code>与进阶篇中有的<code>set fillchars=vert:\ ,stl:\ ,stlnc:\</code> 这三个配置，作用各有提及。</p>
+<p>其他的往我配置里看啦 wwww。</p>
+<p>那个 <code>zsh</code> 是一个 shell 的相关程序，有兴趣的可以查查，没兴趣的删掉吧 QwQ。</p>
+<p>还有一件事，就是文件编码，设置如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">langmenu</span><span class="p">=</span>zh_CN.UTF<span class="m">-8</span>
+<span class="k">set</span> <span class="nb">helplang</span><span class="p">=</span><span class="k">cn</span>
+<span class="k">set</span> <span class="nb">termencoding</span><span class="p">=</span>utf<span class="m">-8</span>
+<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf8
+<span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>utf8<span class="p">,</span>ucs<span class="p">-</span>bom<span class="p">,</span>gbk<span class="p">,</span>cp936<span class="p">,</span>gb2312<span class="p">,</span>gb18030
+</pre></div>
+</td></tr></tbody></table>
+
+<h4 id="_14">快捷键设置<a class="headerlink" href="#_14" title="Permanent link">¶</a></h4>
+<p>其实 Vim 普通模式下没有多少按键是 "自由身"，那么用户该如何定制自己的快捷键呢？Vim 为此提供了 <kbd>leader</kbd> 键来服务。<kbd>leader</kbd> 键在配置中由自己定制，只需要短短一行</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">let</span> mapleader ＝ <span class="s2">""</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>双引号之间就是你自己定义的 <kbd>leader</kbd> 键啦。</p>
+<p>设置快捷键怎么写呢？</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> 快捷键 指令
+<span class="nb">inoremap</span> 快捷键 指令
+</pre></div>
+</td></tr></tbody></table>
+
+<p>两行分别代表了在普通模式下和插入模式下的快捷键执行指令。当然指令不用想多了，没有什么语法，就是相当于在键盘上按你指令中写下的键而已……</p>
+<p>首先我的个人快捷键需求其实不是很多，我的 <kbd>leader</kbd> 键是 <kbd>`</kbd>，但是处于一种坐冷板凳的状态，就更新插件的时候用一用，不过还是很方便的，我的设置是：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;&lt;</span>leader<span class="p">&gt;</span><span class="k">i</span> :PluginInstall<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p><code>&lt;CR&gt;</code>代表回车。设置之后只需要连续按 <kbd>``i</kbd> 即可更新插件，很方便。</p>
+<p>那么你有没有猜到如何利用配置写出括号补全的部分功能呢？没错，就是利用快捷键。将插入模式下的左扩号当做快捷键即可，指令就是<code>()</code>。如果补全后要使光标在括号里怎么办呢？如果仔细观察你就会发现每当退出插入模式，光标总是会向后跳一个字符，我们可以利用这一点，组合 <code>Esc + i</code> 不就变成了向前一个字符进行插入吗？总结下来配置如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">inoremap</span> <span class="p">(</span>  <span class="p">()&lt;</span>esc<span class="p">&gt;</span><span class="k">i</span>
+<span class="nb">inoremap</span> [  []<span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">i</span>
+<span class="nb">inoremap</span> <span class="s2">"  "</span>"<span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">i</span>
+<span class="nb">inoremap</span> <span class="s1">'  '</span>'<span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">i</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>当然我的配置里没有，而且我也不用括号补全插件，其实原因是因为我希望我的撤销树会更合理与好看。你会发现，括号补全为了使光标回到括号内，已经退出了一次插入模式，那么撤销命令的效果就不完整了。而且其实插入模式下使用方向键，也相当与推出插入模式移动又重新回到插入模式，也会使撤销树不完整 = =。所以你会发现进阶篇提到的，我的配置里那个丧心病狂的东西……</p>
+<p>还记得进阶篇里的分屏吗？显然使用鼠标点击来选择活动窗口太慢，而移动命令前加个<kbd>Ctrl</kbd>+<kbd>w</kbd>也不习惯对不对，所以我的做法是用<kbd>Ctrl</kbd>+ 移动命令来映射前面的按键组合。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">h</span>  
+<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">l</span>  
+<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">j</span>  
+<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">k</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>应该比原来的按法好记也好按…… 吧……</p>
+<p>还记得自动折行吧，我们的<code>hjkl</code>命令其实都是在实际行之间移动，而折下来的屏幕行实在是没法子，只能用 <code>l</code> 键不断移过去。但实际上，<code>g + 移动命令</code> 便能够使你在屏幕行间移动，因为考虑到这种移动的常用，我选择将<code>g + 移动命令</code>与移动命令反过来映射。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">noremap</span> <span class="k">j</span> gj
+<span class="nb">noremap</span> gj <span class="k">j</span>
+<span class="nb">noremap</span> gk <span class="k">k</span>
+<span class="nb">noremap</span> <span class="k">k</span> gk
+</pre></div>
+</td></tr></tbody></table>
+
+<p>刚才也都说了，自由身的快捷键不多，<code>F1~F12</code> 就是方便而自由的快捷键。那用它们来干嘛呢？</p>
+<p><kbd>F9</kbd>一键编译</p>
+<p>我想有了之前的编译命令，基础篇命令行模式中的介绍，你应该大概能有个思路了吧。作出的操作肯定如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">:</span><span class="k">w</span>   <span class="c">" 保存</span>
+<span class="p">:</span><span class="k">g</span><span class="p">++</span> xxx.cpp <span class="p">-</span><span class="k">o</span> xxx <span class="c">" 编译</span>
+<span class="p">:</span>./xxx <span class="c">" 运行</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>那么如何实现呢？我倾向于写个函数：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> <span class="p">&lt;</span>F9<span class="p">&gt;</span> :<span class="k">call</span> CompileRunGcc<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+func<span class="p">!</span> CompileRunGcc<span class="p">()</span>
+    exec <span class="s2">"w"</span> 
+    exec <span class="s1">'!g++ % -o %&lt;'</span>
+    exec <span class="s1">'!time ./%&lt;'</span>
+    endfunc  
+</pre></div>
+</td></tr></tbody></table>
+
+<p>第一行代表运行 <code>CompileRunGcc</code> 函数，第二行代表定义函数，三至五行代表函数运行内容，第六行代表函数结束。<code>exec</code> 表示执行命令，<code>%</code> 表示当前文件名，<code>%&lt;</code> 表示当前文件名去掉后缀的名字。我想你应该是看得懂函数内容的。</p>
+<p>不过如果你使用得多了，就会发现当按下 <kbd>F9</kbd> 的时候转到另一个屏即终端进行运行，但是每运行一次都会多一些信息。如此累积的话多来几次整个终端就满了，这时可以使用 bash 下的命令</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>clear
+</pre></div>
+</td></tr></tbody></table>
+
+<p>来清屏，不过我倾向于也把它封装在一个快捷键内，按 <kbd>F12</kbd> 就会自动清屏了，个人觉得用着挺爽……</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> <span class="p">&lt;</span>F12<span class="p">&gt;</span> :<span class="k">call</span> Clss<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+func<span class="p">!</span> Clss<span class="p">()</span>
+    exec <span class="s1">'!clear'</span>
+    endfunc
+</pre></div>
+</td></tr></tbody></table>
+
+<p>还有，在 Vim 中执行外部命令纵使有 <code>:!</code> 的方法，其实还是不方便，要是能直接在 Vim 中再打开一个终端就好了，对吧。Vim 从 8.0 之后就增添了在内部分个屏来打开一个终端的功能，命令是 <code>:terminal</code>。我个人也将它设置成了快捷键，作为强迫症还是装在了函数中 = =。我想有了命令你应该自己会写了。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">nnoremap</span> <span class="p">&lt;</span>F8<span class="p">&gt;</span> :<span class="k">call</span> Term<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+func<span class="p">!</span> Term<span class="p">()</span>
+    exec <span class="s1">'terminal'</span>
+    endfunc
+</pre></div>
+</td></tr></tbody></table>
+
+<p>按<kbd>F8</kbd>就能在上面分出一个窗口打开终端了。</p>
+<p>介于更各种 Vim 版本的压迫，Vim 作者也是奋发图强，Vim 8.1 又更新了调试程序，先用<code>packadd termdebug</code>开启此设置，然后在 Vim 中输入<code>:Termdebug + 编译出的程序名称</code>即可开始 GDB 的过程，具体详细操作可以参考<a href="https://fzheng.me/2018/05/28/termdebug/">这篇文章</a>。这个自然也被我封装函数了 &gt;_&lt;。</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>packadd termdebug
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>F11<span class="p">&gt;</span> :<span class="k">call</span> GDB<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+func<span class="p">!</span> GDB<span class="p">()</span>
+    exec <span class="s1">'Termdebug %&lt;'</span>
+    endfunc       
+</pre></div>
+</td></tr></tbody></table>
+
+<h4 id="_15">写代码好用的<a class="headerlink" href="#_15" title="Permanent link">¶</a></h4>
+<p>首先是 <kbd>Tab</kbd> 键，我们可以用 <code>set tabstop=</code> 来定义 <kbd>Tab</kbd> 的长度，一般当然是 4 个空格，在等于号后面填的数字是多少那么长度就是多少空格。</p>
+<p>然后是写代码的时候，当多个括号嵌套时用肉眼显然不好看出对应的括号，那么我们可以用 <code>set showmatch</code> 开启高亮显示匹配括号。</p>
+<p>有的时候打开 Vim 是不是经常会提示有什么 swap 文件是否确认啥的，那个是临时缓存文件，挺烦的，我们可以使用 <code>set nobackup</code> 与 <code>set noswapfilei</code> 来禁止其生成，这样就方便舒爽多了（还是开着吧）。</p>
+<p>最后嘛，大多数时候调试代码都会用 <code>freopen</code> 来输入输出，再利用分屏操作来打开 <code>.in</code> <code>.out</code> 文件，就可以实时看到结果。不过每次运行程序之后你都会发现因为 <code>.out</code> 文件的修改而会弹出一个确认选项是否重新加载文件，这个也是很不爽的，我们可以开启 <code>set autoread</code> 选项以自动加载改动的文件。</p>
+<h4 id="_16">关于插件<a class="headerlink" href="#_16" title="Permanent link">¶</a></h4>
+<p>插件篇中说到了强大的插件管理器 Vundle，那么在配置中该如何写呢？框架如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/Vundle.<span class="k">vim</span>
+<span class="k">call</span> vundle#begin<span class="p">(</span><span class="s1">'~/.vim/自己创建的用来放插件文件的文件夹'</span><span class="p">)</span>
+
+<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>在两块之间来写需要安装的插件，格式如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Plugin <span class="s1">'作者 Github 上的名字/Github 上的插件仓库名'</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>写完保存后进入 Vim，使用 <code>:PluginInstall</code> 即可自动开始安装。</p>
+<p>我的插件列表：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/Vundle.<span class="k">vim</span>
+<span class="k">call</span> vundle#begin<span class="p">(</span><span class="s1">'~/.vim/plugged'</span><span class="p">)</span>
+
+Plugin <span class="s1">'VundleVim/Vundle.vim'</span>                    <span class="c">" 使用Vundle的必须配置</span>
+Plugin <span class="s1">'chxuan/vimplus-startify'</span>                 <span class="c">" 启动界面</span>
+Plugin <span class="s1">'scrooloose/nerdtree'</span>                     <span class="c">" 目录树</span>
+Plugin <span class="s1">'tiagofumo/vim-nerdtree-syntax-highlight'</span> <span class="c">" 目录树美化</span>
+Plugin <span class="s1">'vim-airline/vim-airline'</span>                 <span class="c">" 状态栏美化</span>
+Plugin <span class="s1">'vim-airline/vim-airline-themes'</span>          <span class="c">" 状态栏美化主题</span>
+Plugin <span class="s1">'tpope/vim-commentary'</span>                    <span class="c">" 快速注释</span>
+Plugin <span class="s1">'scrooloose/syntastic'</span>                    <span class="c">" 语法错误提示</span>
+Plugin <span class="s1">'Lokaltog/vim-easymotion'</span>                 <span class="c">" 快速跳转</span>
+Plugin <span class="s1">'luochen1990/rainbow'</span>                     <span class="c">" 彩虹括号</span>
+<span class="c">"Plugin 'Raimondi/delimitMate'                   " 括号补全</span>
+Plugin <span class="s1">'yianwillis/vimcdoc'</span>                      <span class="c">" HELP文档中文</span>
+Plugin <span class="s1">'sjl/gundo.vim'</span>                           <span class="c">" 撤销树</span>
+Plugin <span class="s1">'suan/vim-instant-markdown'</span>               <span class="c">" markdown 实时预览</span>
+
+<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>关于插件其实也有相关配置，但是都写在一起将会使得 <code>.vimrc</code> 十分臃肿，我们可以额外写在别的文件里，一般文件应该保存在 <code>home</code> 下，然后在配置中写下 <code>source $HOME / 文件路径</code> 即可。我的 nerdtree, syntastic 和 airline 都额外写了别的文件。</p>
+<p>同时我的配置里关于插件的快捷键如下：</p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>F10 ：启动 nerdtree 侧边工程目录树
+F7  ：启动 Gundo 时光机
+</pre></div>
+</td></tr></tbody></table>
+
+<h3 id="_17">关于高效编辑的建议<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<p>为什么 Emacs 和 Vim 这些编辑器效率高？<br>
+很重要的一点在于这些编辑器可以让你切掉你的右半部分的键盘而让你的双手始终处于主键盘区域, 并且让你的双手保持合作, 而不会出现一只手不停的按而另一只手摊在键盘上。<br>
+所以, 如果你想用好 Vim(或者其他高级编辑器), 不要去按方向键, 不要去碰鼠标, 你甚至可以强迫自己：  </p>
+<table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">" 使方向键失效</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>UP<span class="p">&gt;</span> <span class="k">a</span><span class="p">&lt;</span>Bs<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>DOWN<span class="p">&gt;</span> <span class="k">a</span><span class="p">&lt;</span>Bs<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>LEFT<span class="p">&gt;</span> <span class="k">a</span><span class="p">&lt;</span>Bs<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>RIGHT<span class="p">&gt;</span> <span class="k">a</span><span class="p">&lt;</span>Bs<span class="p">&gt;</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>但也许这还不够, 你还可以进一步缩小你双手需要控制的区域。  </p>
+<ul>
+<li>Esc 键在 Vim 中使用频繁, 虽然有 ctrl+[ 来代替它, 但这仍然不够。<br>
+    事实上还用一种高效却鲜为人知的办法: <strong>用 alt</strong>。<br>
+    在 TUI(终端) 中任何模式 alt + 任何按键完全等效于 Esc + 该按键。<br>
+    例如你要退出插入模式向上移动, 普通做法是 Esc+k, 但 alt+k 有同样的效果并且十分高效。  </li>
+<li>Backspace (删除键) 使用十分频繁, 但它处在主键盘的角落, 你不得不挪开手或是伸长小拇指。<br>
+    但在 Vim (甚至终端) 里, 你可以用 ctrl+h 来彻底代替 Backspace。  </li>
+<li>回车键使用同样频繁, 但同样不挪一挪手就得伸长小拇指。<br>
+    幸运的是在 Vim 和终端中, ctrl+m 完全等效与回车。  </li>
+<li>在绝大多数的情况下, 不要去按右边的 ctrl, shift, 用左边的代替。  </li>
+<li>最好不用 F1 到 F12, 如果要映射, 用 Leader 开头的自定义快捷键。  </li>
+</ul>
+<h2 id="visual-studio-code-">Visual Studio Code - 微软家的编辑器<a class="headerlink" href="#visual-studio-code-" title="Permanent link">¶</a></h2>
+<h3 id="_18">简介<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<p>Visual Studio Code (以下简称 VS Code) 是一个免费、开源、跨平台的由微软开发的程序编辑器。它是用 Typescript 编写的，并且采用 Electron 架构。官网是 <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> 。它带有对 JavaScript、TypeScript 和 Node.js 的内置支持，并为其他语言（如 C++、Cype、Java、Python、PHP、GO）提供了丰富的扩展生态系统。
+对比 Sublime 和 Atom，它有以下优点：</p>
+<ul>
+<li>快速</li>
+<li>美观</li>
+<li>社区生态好</li>
+<li>……</li>
+</ul>
+                
+                  
+                
+              
+              
+                <!-- Set from config but allow override -->
+ 
+ 
+
+<hr><blockquote class="page-copyright">
+  <span><i class="md-icon">build</i>本页面最近更新：</span><span class="facts_modified"></span>，<a class="edit_history">更新历史</a><br>
+  <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="https://github.com/24OI/OI-wiki/blob/master/docs/intro/editors.md" title="编辑此页" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
+  <span><i class="md-icon">people</i>本页面贡献者：</span><span class="page_contributors"></span><br>
+  <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a></strong> 协议之条款下提供，附加条款亦可能应用</span>
+</blockquote>
+<!-- Comments Integration -->
+
+
+<h2 id="__comments" data-no-instant="">评论</h2>
+<form id="gitalk-form" onsubmit="return false;" data-no-instant="">
+<div id="gitalk-container" data-no-instant="">
+</div>
+</form>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    id: '编辑工具',
+    owner: 'Ir1d',
+    repo: 'gitment',
+    admin: ['Ir1d'],
+    clientID: 'd6a911c8fba0194626d4',
+    clientSecret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
+    distractionFreeMode: false,
+    pagerDirection: 'first'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+<!-- InstantClick -->
+<script type="text/javascript" src="https://cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant=""></script>
+<script data-no-instant="">
+InstantClick.init(true);
+</script>
+
+<script src="../../assets/javascripts/modernizr.1aa3b519.js" data-no-instant=""></script>
+
+<!-- back to top -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/data-tip@0.0.52/dist/data-tip.css">
+<script>
+// 当网页向下滑动 20px 出现"返回顶部" 按钮
+window.onscroll = function() {scrollFunction()};
+ 
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+ 
+// 点击按钮，返回顶部
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" class="data-tip-left" data-tip="回到顶部">
+  <svg class="Zi Zi--BackToTop data-tip-left" data-tip="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path></svg>
+</button>
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
+        
+          <a href="../judgers/" title="评测工具" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                评测工具
+              </span>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a href="../wsl/" title="WSL (Windows 10)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                WSL (Windows 10)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2016 - 2018 OI Wiki Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+        </div>
+        
+        <span style="float:right" class="build_date_utc"><a href="https://github.com/24OI/OI-wiki">最近更新：2018-11-21</a></span>
+      <!-- Social links -->
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.905597d0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/Han/3.3.0/han.min.js"></script>
+      
+        <script src="../../_static/js/extra.js?v=10"></script>
+      
+    
+    
+      
+    
+  
+</body></html>
