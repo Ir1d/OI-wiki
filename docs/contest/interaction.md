@@ -124,6 +124,7 @@ author: countercurrent-time, StudyingFather
     ```cpp
     #include <algorithm>
     #include <cstdio>
+    
     #include "gap.h"
     
     long long findGap(int T, int N) {

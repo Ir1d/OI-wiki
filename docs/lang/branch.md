@@ -146,7 +146,9 @@ switch (i) {
     break;
   }
 
-  default: { cout << "Hello World" << endl; }
+  default: {
+    cout << "Hello World" << endl;
+  }
 }
 ```
 
