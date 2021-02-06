@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - latest
+dist: bionic
 addons:
   apt:
     sources:
