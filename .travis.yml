@@ -3,6 +3,8 @@ node_js:
   - latest
 addons:
   apt:
+    sources:
+      - ['llvm-toolchain-bionic-4.0']
     packages:
       - clang-format-9
 before_install:
