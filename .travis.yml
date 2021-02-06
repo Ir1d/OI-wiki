@@ -13,7 +13,7 @@ before_install:
   - git fetch --unshallow
 script:
   - remark ./docs -o --silent
-  - if [[ `git status --porcelain` ]]; then travis_terminate 1; fi
+  - if [[ `git status --porcelain` ]]; then exit 1; fi
 after_failure:
   - git add .
   - if [ ! "$TRAVIS_PULL_REQUEST" = "false" ]; then git remote add pr https://24OI-bot:$GH_TOKEN@github.com/$TRAVIS_PULL_REQUEST_SLUG.git;git commit --author "24OI-bot <15963390+24OI-bot@users.noreply.github.com>" -m "[ci skip] style: lint files with remark-lint";git push pr; fi
