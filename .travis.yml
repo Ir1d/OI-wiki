@@ -9,7 +9,7 @@ addons:
     packages:
       - clang-format-9
 before_install:
-  - npm ci
+  - npm install
 script:
   - remark ./docs -o --silent
   - git status -s | wc -l
