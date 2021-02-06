@@ -10,10 +10,12 @@ addons:
       - clang-format-9
 before_install:
   - npm install
+  - git fetch --unshallow
 script:
   - remark ./docs -o --silent
   - git status -s | wc -l
 after_failure:
   - git add .
-  - git commit --author "24OI-bot <15963390+24OI-bot@users.noreply.github.com>" -m "[ci skip] style: lint files with remark-lint"
+  - if [ ! "$TRAVIS_PULL_REQUEST" = "false" ]; then git remote add pr https://24OI-bot:$GH_TOKEN@github.com/$TRAVIS_PULL_REQUEST_SLUG.git;git commit --author "24OI-bot <15963390+24OI-bot@users.noreply.github.com>" -m "[ci skip] style: lint files with remark-lint";git push pr; fi
+  - 
   - git push origin
